@@ -1,6 +1,6 @@
-# claudiocotrufo.github.io
+# cc-cv-ghp
 
-Personal site of Claudio Cotrufo, senior full-stack engineer and tech lead (.NET, Angular, Azure). Served by GitHub Pages at <https://claudiocotrufo.github.io>.
+Personal site of Claudio Cotrufo, senior full-stack engineer and tech lead (.NET, Angular, Azure). Served by GitHub Pages at <https://claudiocotrufo.github.io/cc-cv-ghp/>.
 
 Plain static HTML, CSS and JavaScript, no build step.
 
