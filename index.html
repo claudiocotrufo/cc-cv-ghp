@@ -9,10 +9,10 @@
   <meta property="og:description" content="Nine years building enterprise web platforms in C# and Angular, on Microsoft Azure.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://claudiocotrufo.github.io/cc-cv-ghp/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23351a2b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23edccbe' text-anchor='middle'%3ECC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5' fill='%23351a2b'/%3E%3Ctext x='16' y='20.5' font-family='Arial,sans-serif' font-weight='700' font-size='11' fill='%23edccbe' text-anchor='middle'%3ECC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
           <img src="assets/torino-mole-antonelliana.jpg" width="930" height="1400" alt="The Mole Antonelliana in Turin, seen from below against a blue sky">
         </figure>
         <div class="card-panel">
-          <svg class="stripe" aria-hidden="true" focusable="false"><defs><pattern id="bars" width="56" height="8" patternUnits="userSpaceOnUse"><rect width="28" height="200" class="bar"/></pattern></defs><rect width="100%" height="100%" fill="url(#bars)"/></svg>
+          <svg class="hexband" aria-hidden="true" focusable="false"><defs><pattern id="hexes" width="28" height="48" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/><polygon class="cell" points="0,26 11,32.5 11,45.5 0,52 -11,45.5 -11,32.5"/><polygon class="cell" points="28,26 39,32.5 39,45.5 28,52 17,45.5 17,32.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes)"/></svg>
           <nav class="topnav" aria-label="Sections">
             <a href="#work">Work</a>
             <a href="#stack">Stack</a>
@@ -118,44 +118,30 @@
 
       <section id="stack" class="stack" data-chapter="po" aria-labelledby="stack-title">
         <h2 id="stack-title" class="reveal">The stack, by year</h2>
-        <p class="stack-lede reveal">Open a technology to see where I used it and for how long.</p>
+        <p class="stack-lede reveal">Pick a cell to see where I used it and for how long.</p>
         <figure class="phone-photo inline">
           <img src="assets/po-river-via-murazzi-del-po-ferdinando.jpg" width="1400" height="933" alt="The Po river along the Murazzi in Turin, autumn trees on the far bank" loading="lazy">
         </figure>
-        <ul class="tech-list" data-tech-list>
-          <li class="tech" data-key="csharp">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-csharp"><span class="tech-name">C# and .NET</span><span class="tech-years">2017–now</span></button>
-            <div class="tech-more" id="t-csharp" hidden><p>Every software role since 2017: CRM components at Betacom, back ends on .NET Framework and .NET Core at Amaris and Welol, ASP.NET renderings for Sitecore at MSC.</p></div>
-          </li>
-          <li class="tech" data-key="angular">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-angular"><span class="tech-name">Angular</span><span class="tech-years">2018–now</span></button>
-            <div class="tech-more" id="t-angular" hidden><p>From Angular 6 at Amaris to Angular 17 at MSC, where I set the technical direction of several applications. Every version in between, at Welol.</p></div>
-          </li>
-          <li class="tech" data-key="typescript">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-typescript"><span class="tech-name">TypeScript</span><span class="tech-years">2018–now</span></button>
-            <div class="tech-more" id="t-typescript" hidden><p>The language of every Angular front end I have shipped, and of the React single-page applications at Amaris.</p></div>
-          </li>
-          <li class="tech" data-key="azure">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-azure"><span class="tech-name">Azure and Azure DevOps</span><span class="tech-years">2021–now</span></button>
-            <div class="tech-more" id="t-azure" hidden><p>Pipelines and Cypress test runs at Welol; at MSC, Sitecore platforms hosted on Azure and the release cycle I supervise on Azure DevOps.</p></div>
-          </li>
-          <li class="tech" data-key="sitecore">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-sitecore"><span class="tech-name">Sitecore 10</span><span class="tech-years">2022–now</span></button>
-            <div class="tech-more" id="t-sitecore" hidden><p>Architecture of the frontend and its Sitecore integration at MSC, with reusable Alpine.js components for the renderings.</p></div>
-          </li>
-          <li class="tech" data-key="blazor">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-blazor"><span class="tech-name">Blazor and Razor</span><span class="tech-years">2021–2022</span></button>
-            <div class="tech-more" id="t-blazor" hidden><p>Front ends for .NET web applications at Welol, next to the Angular ones.</p></div>
-          </li>
-          <li class="tech" data-key="signalr">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-signalr"><span class="tech-name">SignalR</span><span class="tech-years">2018–2021</span></button>
-            <div class="tech-more" id="t-signalr" hidden><p>Real-time updates in client applications at Amaris.</p></div>
-          </li>
-          <li class="tech" data-key="dynamics">
-            <button class="tech-row" aria-expanded="false" aria-controls="t-dynamics"><span class="tech-name">Dynamics CRM</span><span class="tech-years">2017–2018</span></button>
-            <div class="tech-more" id="t-dynamics" hidden><p>Customisation and second-line support at Betacom, on SQL and MySQL databases.</p></div>
-          </li>
+        <ul class="honeycomb" aria-label="Technologies">
+          <li><button class="hex" data-key="csharp" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">C# / .NET</span><span class="hex-years">2017–now</span></button></li>
+          <li><button class="hex" data-key="angular" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Angular</span><span class="hex-years">2018–now</span></button></li>
+          <li><button class="hex" data-key="typescript" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">TypeScript</span><span class="hex-years">2018–now</span></button></li>
+          <li><button class="hex" data-key="azure" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Azure DevOps</span><span class="hex-years">2021–now</span></button></li>
+          <li><button class="hex" data-key="sitecore" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Sitecore 10</span><span class="hex-years">2022–now</span></button></li>
+          <li><button class="hex" data-key="blazor" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Blazor</span><span class="hex-years">2021–2022</span></button></li>
+          <li><button class="hex" data-key="signalr" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">SignalR</span><span class="hex-years">2018–2021</span></button></li>
+          <li><button class="hex" data-key="dynamics" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Dynamics CRM</span><span class="hex-years">2017–2018</span></button></li>
         </ul>
+        <div class="tech-detail" id="tech-detail" aria-live="polite">
+          <div class="tech-panel" data-panel="csharp"><p class="tech-panel-title">C# / .NET <span class="years">2017–now</span></p><p>Every software role since 2017: CRM components at Betacom, back ends on .NET Framework and .NET Core at Amaris and Welol, ASP.NET renderings for Sitecore at MSC.</p></div>
+          <div class="tech-panel" data-panel="angular"><p class="tech-panel-title">Angular <span class="years">2018–now</span></p><p>From Angular 6 at Amaris to Angular 17 at MSC, where I set the technical direction of several applications. Every version in between, at Welol.</p></div>
+          <div class="tech-panel" data-panel="typescript"><p class="tech-panel-title">TypeScript <span class="years">2018–now</span></p><p>The language of every Angular front end I have shipped, and of the React single-page applications at Amaris.</p></div>
+          <div class="tech-panel" data-panel="azure"><p class="tech-panel-title">Azure DevOps <span class="years">2021–now</span></p><p>Pipelines and Cypress test runs at Welol; at MSC, Sitecore platforms hosted on Microsoft Azure and the release cycle I supervise on Azure DevOps.</p></div>
+          <div class="tech-panel" data-panel="sitecore"><p class="tech-panel-title">Sitecore 10 <span class="years">2022–now</span></p><p>Architecture of the frontend and its Sitecore integration at MSC, with reusable Alpine.js components for the renderings.</p></div>
+          <div class="tech-panel" data-panel="blazor"><p class="tech-panel-title">Blazor <span class="years">2021–2022</span></p><p>Blazor and Razor front ends for .NET web applications at Welol, next to the Angular ones.</p></div>
+          <div class="tech-panel" data-panel="signalr"><p class="tech-panel-title">SignalR <span class="years">2018–2021</span></p><p>Real-time updates in client applications at Amaris.</p></div>
+          <div class="tech-panel" data-panel="dynamics"><p class="tech-panel-title">Dynamics CRM <span class="years">2017–2018</span></p><p>Customisation and second-line support at Betacom, on SQL and MySQL databases.</p></div>
+        </div>
         <p class="stack-also reveal">Also: React, Alpine.js, Keycloak, Cypress, nopCommerce, DevExpress and DevExtreme, Storyblok, Autofac.</p>
       </section>
 
@@ -207,7 +193,7 @@
       <img src="assets/torino-mole-antonelliana.jpg" width="930" height="1400" alt="" loading="lazy">
     </div>
     <div class="footer-menu">
-      <svg class="stripe thin" aria-hidden="true" focusable="false"><defs><pattern id="bars-footer" width="56" height="8" patternUnits="userSpaceOnUse"><rect width="28" height="200" class="bar"/></pattern></defs><rect width="100%" height="100%" fill="url(#bars-footer)"/></svg>
+      <svg class="hexband thin" aria-hidden="true" focusable="false"><defs><pattern id="hexes-footer" width="28" height="48" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/><polygon class="cell" points="0,26 11,32.5 11,45.5 0,52 -11,45.5 -11,32.5"/><polygon class="cell" points="28,26 39,32.5 39,45.5 28,52 17,45.5 17,32.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes-footer)"/></svg>
       <p class="footer-mark">Claudio Cotrufo</p>
       <nav aria-label="Footer">
         <ul class="menu">

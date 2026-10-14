@@ -57,19 +57,17 @@
     reveals.forEach((el) => revealObs.observe(el));
   }
 
-  // The stack: one technology open at a time.
-  const techs = [...document.querySelectorAll('.tech')];
-  const open = (tech, on) => {
-    tech.classList.toggle('is-open', on);
-    tech.querySelector('.tech-row').setAttribute('aria-expanded', String(on));
-    tech.querySelector('.tech-more').hidden = !on;
-  };
-  techs.forEach((tech) => {
-    tech.querySelector('.tech-row').addEventListener('click', () => {
-      const willOpen = !tech.classList.contains('is-open');
-      techs.forEach((t) => open(t, false));
-      open(tech, willOpen);
+  // The stack: one cell of the honeycomb selected at a time.
+  const cells = [...document.querySelectorAll('.hex')];
+  const panels = [...document.querySelectorAll('.tech-panel')];
+  const select = (key) => {
+    cells.forEach((c) => {
+      const on = c.dataset.key === key;
+      c.classList.toggle('is-on', on);
+      c.setAttribute('aria-pressed', String(on));
     });
-  });
-  if (techs.length) open(techs[0], true);
+    panels.forEach((p) => { p.hidden = p.dataset.panel !== key; });
+  };
+  cells.forEach((c) => c.addEventListener('click', () => select(c.dataset.key)));
+  if (cells.length) select(cells[0].dataset.key);
 })();
