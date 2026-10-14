@@ -1,17 +1,19 @@
-/* Claudio Cotrufo: split stage with a honeycomb. Blush and aubergine, Space Grotesk and Inter. */
+/* Claudio Cotrufo: split stage with a honeycomb. Anthracite, mustard and grey, Space Grotesk and Inter. */
 
 :root {
-  --bg: #edccbe;
-  --surface: #e8c2b2;
-  --surface-2: #e2b6a5;
-  --ink: #351a2b;
-  --muted: #6c4857;
-  --accent: #351a2b;
-  --accent-ink: #edccbe;
-  --field-1: #351a2b;
-  --field-1-ink: #edccbe;
-  --field-1-muted: #d9b2a6;
-  --field-1-surface: #42233a;
+  --bg: #e4e3df;
+  --surface: #d9d8d3;
+  --surface-2: #cbc9c3;
+  --ink: #2a2c2e;
+  --muted: #575a5e;
+  --mustard: #d4a21c;
+  --mustard-light: #e3b84a;
+  --accent: #2a2c2e;
+  --accent-ink: #d4a21c;
+  --field-1: #2a2c2e;
+  --field-1-ink: #ecebe7;
+  --field-1-muted: #b0b3b6;
+  --field-1-surface: #36393c;
 
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --step-body: clamp(1.0625rem, 1.02rem + 0.2vw, 1.1875rem);
@@ -48,7 +50,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 500; }
 a { color: inherit; text-decoration-thickness: 0.07em; text-underline-offset: 0.2em; }
 a:hover { text-decoration-thickness: 0.14em; }
 :focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
-::selection { background: var(--ink); color: var(--bg); }
+::selection { background: var(--mustard); color: var(--ink); }
 .years { font-variant-numeric: tabular-nums lining-nums; }
 
 .skip {
@@ -124,7 +126,7 @@ a:hover { text-decoration-thickness: 0.14em; }
   position: absolute; left: 0; right: 0; top: 0;
   display: block; width: 100%; height: 30px;
 }
-.hexband .cell { fill: var(--ink); }
+.hexband .cell { fill: var(--mustard); }
 .wordmark {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: var(--display);
@@ -134,7 +136,7 @@ a:hover { text-decoration-thickness: 0.14em; }
 }
 .wordmark::before {
   content: ""; width: 0.9em; height: 1.04em;
-  background: var(--ink); clip-path: var(--hex);
+  background: var(--mustard); clip-path: var(--hex);
 }
 .headline {
   font-size: var(--step-display);
@@ -158,7 +160,7 @@ a:hover { text-decoration-thickness: 0.14em; }
   clip-path: var(--hex-wide);
   transition: transform 160ms var(--ease-out), background-color 160ms ease, color 160ms ease;
 }
-.button:hover { background: #4f2a40; }
+.button:hover { background: var(--mustard); color: var(--ink); }
 .button:focus-visible { outline: none; background: var(--bg); color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; }
 .button:active { transform: scale(0.97); }
 .button-note { font-size: var(--step-small); font-weight: 400; opacity: 0.85; }
@@ -177,7 +179,7 @@ a:hover { text-decoration-thickness: 0.14em; }
 
 /* ---------- Fields (dark sections) ---------- */
 .field { background: var(--field-1); color: var(--field-1-ink); }
-.field ::selection { background: var(--field-1-ink); color: var(--field-1); }
+.field ::selection { background: var(--mustard); color: var(--ink); }
 
 h2 {
   font-size: var(--step-display);
@@ -191,7 +193,7 @@ h2 {
 .role li::before {
   content: ""; position: absolute; left: 0; top: 0.5em;
   width: 0.55em; height: 0.635em;
-  background: var(--field-1-muted); clip-path: var(--hex);
+  background: var(--mustard); clip-path: var(--hex);
 }
 
 /* ---------- Work: big names ---------- */
@@ -254,7 +256,7 @@ h2 {
   clip-path: var(--hex);
   transition: transform 220ms var(--ease-out);
 }
-.hex.now { --face: var(--ink); --face-ink: var(--bg); }
+.hex.now { --face: var(--mustard); --face-ink: var(--ink); }
 .hex.recent { --face: var(--muted); --face-ink: var(--bg); }
 .hex.past { --face: var(--surface-2); --face-ink: var(--ink); }
 .hex-face {
@@ -282,7 +284,7 @@ h2 {
 .hex-key { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: var(--step-small); color: var(--muted); }
 .key { display: inline-block; width: 14px; height: 16px; clip-path: var(--hex); }
 .key + .key, .hex-key .key:not(:first-child) { margin-left: 10px; }
-.key.now { background: var(--ink); }
+.key.now { background: var(--mustard); }
 .key.recent { background: var(--muted); }
 .key.past { background: var(--surface-2); }
 
@@ -317,7 +319,7 @@ h2 {
   padding: calc(var(--gap-section) * 0.8) var(--margin) var(--gap-section);
 }
 .contact .hexband { height: 30px; }
-.contact .hexband .cell { fill: var(--bg); }
+.contact .hexband .cell { fill: var(--mustard); }
 .contact h2 { color: var(--field-1-muted); font-size: var(--step-lead); }
 .contact-mail {
   margin-top: 20px;
@@ -328,9 +330,9 @@ h2 {
 .contact-mail a { text-decoration-thickness: 0.04em; text-underline-offset: 0.14em; }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; margin-top: 32px; }
 .contact-actions .button { margin-top: 0; }
-.button.light { background: var(--field-1-ink); color: var(--field-1); }
-.button.light:hover { background: #f6dfd5; }
-.button.light:focus-visible { background: var(--field-1-muted); color: var(--field-1); }
+.button.light { background: var(--mustard); color: var(--ink); }
+.button.light:hover { background: var(--mustard-light); }
+.button.light:focus-visible { background: var(--field-1-ink); color: var(--ink); }
 .copy-status { font-size: var(--step-small); }
 .contact-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 40px; margin-top: 48px; }
 .contact-links a { display: inline-block; padding: 8px 0; }
