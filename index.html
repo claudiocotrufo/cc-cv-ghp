@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Claudio Cotrufo · Full-stack lead</title>
-  <meta name="description" content="Claudio Cotrufo, senior full-stack engineer and tech lead on .NET and Angular, Microsoft Azure and Azure DevOps. Turin, Italy.">
-  <meta property="og:title" content="Claudio Cotrufo · Full-stack lead, .NET and Angular">
-  <meta property="og:description" content="Nine years building enterprise web platforms in C# and Angular, on Microsoft Azure.">
+  <title>Claudio Cotrufo · Frontend tech lead</title>
+  <meta name="description" content="Claudio Cotrufo, frontend tech lead with a .NET background: headless Angular front ends, C# and .NET, Microsoft Azure and Azure DevOps. Turin, Italy.">
+  <meta property="og:title" content="Claudio Cotrufo · Frontend tech lead, .NET background">
+  <meta property="og:description" content="Leading the headless Angular front ends of msc.com, with nine years of C# and .NET behind them.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://claudiocotrufo.github.io/cc-cv-ghp/">
+  <meta name="theme-color" content="#351a2b">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5' fill='%23351a2b'/%3E%3Ctext x='16' y='20.5' font-family='Arial,sans-serif' font-weight='700' font-size='11' fill='%23edccbe' text-anchor='middle'%3ECC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,35 +25,38 @@
       <img class="stage-img is-on" data-photo="mole" src="assets/torino-mole-antonelliana.jpg" width="930" height="1400" alt="">
       <img class="stage-img" data-photo="roma" src="assets/arcades-via-roma-turin-49194977148.jpg" width="933" height="1400" alt="" loading="lazy">
       <img class="stage-img" data-photo="po" src="assets/po-river-via-murazzi-del-po-ferdinando.jpg" width="1400" height="933" alt="" loading="lazy">
-      <img class="stage-img" data-photo="superga" src="assets/turin-from-the-portico-of-the-superga.jpg" width="1400" height="1027" alt="" loading="lazy">
       <img class="stage-img" data-photo="bari" src="assets/bari-castello-03.jpg" width="1400" height="1050" alt="" loading="lazy">
+      <img class="stage-img" data-photo="superga" src="assets/turin-from-the-portico-of-the-superga.jpg" width="1400" height="1027" alt="" loading="lazy">
       <p class="stage-caption"><span data-caption>The Mole Antonelliana, Turin</span></p>
     </div>
 
     <main class="column">
-      <header class="card" data-chapter="mole">
+      <nav class="bar" aria-label="Sections">
+        <ul class="bar-links">
+          <li><a href="#work" data-nav="work">Work</a></li>
+          <li><a href="#stack" data-nav="stack">Stack</a></li>
+          <li><a href="#about" data-nav="about">About</a></li>
+          <li><a href="#contact" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <header class="card" id="top" data-chapter="mole">
         <figure class="phone-photo">
           <img src="assets/torino-mole-antonelliana.jpg" width="930" height="1400" alt="The Mole Antonelliana in Turin, seen from below against a blue sky">
         </figure>
         <div class="card-panel">
-          <svg class="hexband" aria-hidden="true" focusable="false"><defs><pattern id="hexes" width="28" height="48" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/><polygon class="cell" points="0,26 11,32.5 11,45.5 0,52 -11,45.5 -11,32.5"/><polygon class="cell" points="28,26 39,32.5 39,45.5 28,52 17,45.5 17,32.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes)"/></svg>
-          <nav class="topnav" aria-label="Sections">
-            <a href="#work">Work</a>
-            <a href="#stack">Stack</a>
-            <a href="#contact">Contact</a>
-          </nav>
+          <svg class="hexband" aria-hidden="true" focusable="false"><defs><pattern id="hexes" width="28" height="30" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes)"/></svg>
           <p class="wordmark">Claudio Cotrufo</p>
-          <h1 class="headline">Full-stack lead, .NET and&nbsp;Angular</h1>
-          <p class="lede">Nine years building enterprise web platforms in C# and Angular, on Microsoft Azure, from Turin.</p>
+          <h1 class="headline">Frontend tech lead, .NET&nbsp;background</h1>
+          <p class="lede">I lead the headless Angular front ends of msc.com, with nine years of C# and .NET behind them. Based in Turin.</p>
           <a class="button" href="files/claudio-cotrufo-cv.pdf" download>Download the CV <span class="button-note">PDF, 2 pages</span></a>
+          <p class="card-mail">or write to <a href="mailto:claudio.cotrufo.gm@gmail.com">claudio.cotrufo.gm@gmail.com</a></p>
         </div>
       </header>
 
       <section id="profile" class="intro" data-chapter="mole" aria-label="Profile">
-        <p class="first reveal">I lead the headless Angular 17 front ends of the msc.com websites, built on the Sitecore 10 CMS and hosted on Microsoft Azure.</p>
-        <p class="reveal">I also supervise a fortnightly release cycle on Azure DevOps, reviewing the code before each release ships, while staying hands-on in the codebase.</p>
-        <p class="reveal">Before MSC I spent four years as a consultant at Welol and Amaris: C# back ends on .NET Framework and .NET Core, front ends in Angular, Blazor, Razor and React, a real-time chat on SignalR.</p>
-        <p class="reveal">In each of the last three roles I have trained and mentored the junior developers on the team. <a href="#work">See where I have worked</a>.</p>
+        <p class="first reveal">At MSC I lead the msc.com corporate websites: headless Angular 17 front ends on the Sitecore 10 CMS, hosted on Microsoft Azure.</p>
+        <p class="reveal">I supervise a fortnightly release cycle on Azure DevOps, reviewing the code before each release ships, and I have mentored the junior developers on the team in each of my last three roles while staying hands-on in the codebase.</p>
       </section>
 
       <section id="work" class="work field" data-chapter="roma" aria-labelledby="work-title">
@@ -61,7 +65,7 @@
           <img src="assets/arcades-via-roma-turin-49194977148.jpg" width="933" height="1400" alt="The arcades of Via Roma in Turin at night" loading="lazy">
         </figure>
 
-        <article class="role" data-tech="csharp angular azure sitecore typescript">
+        <article class="role" id="role-msc" data-tech="csharp angular typescript azure sitecore">
           <h3 class="role-name reveal">MSC</h3>
           <p class="role-meta reveal"><span>Tech Lead, Frontend</span> <span class="years">Jul 2022–present</span></p>
           <p class="role-sum reveal">Mediterranean Shipping Company, Turin. Frontend tech lead on the msc.com corporate websites, built as headless Angular 17 front ends on the Sitecore 10 CMS and hosted on Microsoft Azure.</p>
@@ -75,7 +79,7 @@
           </ul>
         </article>
 
-        <article class="role" data-tech="csharp angular azure blazor">
+        <article class="role" id="role-welol" data-tech="csharp angular azure blazor">
           <h3 class="role-name reveal">Welol</h3>
           <p class="role-meta reveal"><span>Software Engineer, Experienced Consultant</span> <span class="years">Feb 2021–Jul 2022</span></p>
           <p class="role-sum reveal">Turin. Consultant delivering .NET and Angular web applications, deployed through CI/CD on Microsoft Azure.</p>
@@ -88,7 +92,7 @@
           </ul>
         </article>
 
-        <article class="role" data-tech="csharp angular typescript react signalr">
+        <article class="role" id="role-amaris" data-tech="csharp angular typescript signalr">
           <h3 class="role-name reveal">Amaris</h3>
           <p class="role-meta reveal"><span>Software Engineer, Experienced Consultant</span> <span class="years">Oct 2018–Feb 2021</span></p>
           <p class="role-sum reveal">Turin. Consultant on the web applications of BasicNet, the group behind Robe di Kappa and Sebago, moving from senior consultant towards a tech-lead role.</p>
@@ -100,7 +104,7 @@
           </ul>
         </article>
 
-        <article class="role" data-tech="csharp dynamics">
+        <article class="role" id="role-betacom" data-tech="csharp dynamics">
           <h3 class="role-name reveal">Betacom</h3>
           <p class="role-meta reveal"><span>Software Engineer</span> <span class="years">Feb 2017–Oct 2018</span></p>
           <p class="role-sum reveal">Turin. Microsoft Dynamics CRM customisation and second- and third-line (L2/L3) support.</p>
@@ -118,43 +122,32 @@
 
       <section id="stack" class="stack" data-chapter="po" aria-labelledby="stack-title">
         <h2 id="stack-title" class="reveal">The stack, by year</h2>
-        <p class="stack-lede reveal">Pick a cell to see where I used it and for how long.</p>
+        <p class="stack-lede reveal">The darker the cell, the more recent the work. Pick one to see where I used it.</p>
         <figure class="phone-photo inline">
           <img src="assets/po-river-via-murazzi-del-po-ferdinando.jpg" width="1400" height="933" alt="The Po river along the Murazzi in Turin, autumn trees on the far bank" loading="lazy">
         </figure>
-        <ul class="honeycomb" aria-label="Technologies">
-          <li><button class="hex" data-key="csharp" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">C# / .NET</span><span class="hex-years">2017–now</span></button></li>
-          <li><button class="hex" data-key="angular" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Angular</span><span class="hex-years">2018–now</span></button></li>
-          <li><button class="hex" data-key="typescript" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">TypeScript</span><span class="hex-years">2018–now</span></button></li>
-          <li><button class="hex" data-key="azure" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Azure DevOps</span><span class="hex-years">2021–now</span></button></li>
-          <li><button class="hex" data-key="sitecore" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Sitecore 10</span><span class="hex-years">2022–now</span></button></li>
-          <li><button class="hex" data-key="blazor" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Blazor</span><span class="hex-years">2021–2022</span></button></li>
-          <li><button class="hex" data-key="signalr" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">SignalR</span><span class="hex-years">2018–2021</span></button></li>
-          <li><button class="hex" data-key="dynamics" aria-pressed="false" aria-controls="tech-detail"><span class="hex-name">Dynamics CRM</span><span class="hex-years">2017–2018</span></button></li>
+        <ul class="honeycomb" role="radiogroup" aria-label="Technologies">
+          <li><button class="hex now" role="radio" aria-checked="false" data-key="csharp"><span class="hex-face"><span class="hex-name">C# / .NET</span><span class="hex-years">2017–now</span></span></button></li>
+          <li><button class="hex now" role="radio" aria-checked="false" data-key="angular"><span class="hex-face"><span class="hex-name">Angular</span><span class="hex-years">2018–now</span></span></button></li>
+          <li><button class="hex now" role="radio" aria-checked="false" data-key="typescript"><span class="hex-face"><span class="hex-name">TypeScript</span><span class="hex-years">2018–now</span></span></button></li>
+          <li><button class="hex now" role="radio" aria-checked="false" data-key="azure"><span class="hex-face"><span class="hex-name">Azure DevOps</span><span class="hex-years">2021–now</span></span></button></li>
+          <li><button class="hex now" role="radio" aria-checked="false" data-key="sitecore"><span class="hex-face"><span class="hex-name">Sitecore 10</span><span class="hex-years">2022–now</span></span></button></li>
+          <li><button class="hex recent" role="radio" aria-checked="false" data-key="blazor"><span class="hex-face"><span class="hex-name">Blazor</span><span class="hex-years">2021–2022</span></span></button></li>
+          <li><button class="hex recent" role="radio" aria-checked="false" data-key="signalr"><span class="hex-face"><span class="hex-name">SignalR</span><span class="hex-years">2018–2021</span></span></button></li>
+          <li><button class="hex past" role="radio" aria-checked="false" data-key="dynamics"><span class="hex-face"><span class="hex-name">Dynamics CRM</span><span class="hex-years">2017–2018</span></span></button></li>
         </ul>
-        <div class="tech-detail" id="tech-detail" aria-live="polite">
-          <div class="tech-panel" data-panel="csharp"><p class="tech-panel-title">C# / .NET <span class="years">2017–now</span></p><p>Every software role since 2017: CRM components at Betacom, back ends on .NET Framework and .NET Core at Amaris and Welol, ASP.NET renderings for Sitecore at MSC.</p></div>
-          <div class="tech-panel" data-panel="angular"><p class="tech-panel-title">Angular <span class="years">2018–now</span></p><p>From Angular 6 at Amaris to the headless Angular 17 front ends of msc.com, and now an Angular 22 rewrite of the legacy monolith.</p></div>
-          <div class="tech-panel" data-panel="typescript"><p class="tech-panel-title">TypeScript <span class="years">2018–now</span></p><p>The language of every Angular front end I have shipped, and of the React single-page applications at Amaris.</p></div>
-          <div class="tech-panel" data-panel="azure"><p class="tech-panel-title">Azure DevOps <span class="years">2021–now</span></p><p>Pipelines and Cypress test runs at Welol; at MSC, Sitecore platforms hosted on Microsoft Azure and the fortnightly release cycle I supervise on Azure DevOps.</p></div>
-          <div class="tech-panel" data-panel="sitecore"><p class="tech-panel-title">Sitecore 10 <span class="years">2022–now</span></p><p>The msc.com websites: headless Angular front ends on the Sitecore 10 CMS, after years of Razor views on ASP.NET.</p></div>
-          <div class="tech-panel" data-panel="blazor"><p class="tech-panel-title">Blazor <span class="years">2021–2022</span></p><p>Blazor and Razor front ends for .NET web applications at Welol, next to the Angular ones.</p></div>
-          <div class="tech-panel" data-panel="signalr"><p class="tech-panel-title">SignalR <span class="years">2018–2021</span></p><p>An internal real-time chat at Amaris.</p></div>
-          <div class="tech-panel" data-panel="dynamics"><p class="tech-panel-title">Dynamics CRM <span class="years">2017–2018</span></p><p>Customisation and L2/L3 support at Betacom, on SQL and MySQL databases.</p></div>
+        <p class="hex-key reveal"><span class="key now"></span>In use now <span class="key recent"></span>Until 2022 <span class="key past"></span>Earlier</p>
+        <div class="tech-detail" aria-live="polite">
+          <div class="tech-panel" data-panel="csharp"><p class="tech-panel-title">C# / .NET <span class="years">2017–now</span></p><p>Used at <a href="#role-msc">MSC</a>, <a href="#role-welol">Welol</a>, <a href="#role-amaris">Amaris</a> and <a href="#role-betacom">Betacom</a>: every software role I have had.</p></div>
+          <div class="tech-panel" data-panel="angular"><p class="tech-panel-title">Angular <span class="years">2018–now</span></p><p>Used at <a href="#role-msc">MSC</a>, <a href="#role-welol">Welol</a> and <a href="#role-amaris">Amaris</a>, from version 6 to the Angular 22 rewrite under way.</p></div>
+          <div class="tech-panel" data-panel="typescript"><p class="tech-panel-title">TypeScript <span class="years">2018–now</span></p><p>Used at <a href="#role-msc">MSC</a> and <a href="#role-amaris">Amaris</a>, in every Angular front end and in the React applications.</p></div>
+          <div class="tech-panel" data-panel="azure"><p class="tech-panel-title">Azure DevOps <span class="years">2021–now</span></p><p>Used at <a href="#role-msc">MSC</a> and <a href="#role-welol">Welol</a>, for pipelines and releases, with the sites hosted on Microsoft Azure.</p></div>
+          <div class="tech-panel" data-panel="sitecore"><p class="tech-panel-title">Sitecore 10 <span class="years">2022–now</span></p><p>Used at <a href="#role-msc">MSC</a>, as the CMS behind the headless msc.com front ends.</p></div>
+          <div class="tech-panel" data-panel="blazor"><p class="tech-panel-title">Blazor <span class="years">2021–2022</span></p><p>Used at <a href="#role-welol">Welol</a>, with Razor, next to the Angular front ends.</p></div>
+          <div class="tech-panel" data-panel="signalr"><p class="tech-panel-title">SignalR <span class="years">2018–2021</span></p><p>Used at <a href="#role-amaris">Amaris</a>, for an internal real-time chat.</p></div>
+          <div class="tech-panel" data-panel="dynamics"><p class="tech-panel-title">Dynamics CRM <span class="years">2017–2018</span></p><p>Used at <a href="#role-betacom">Betacom</a>, customising the CRM and handling L2/L3 support.</p></div>
         </div>
         <p class="stack-also reveal">Also: React, Alpine.js, Keycloak, Cypress, nopCommerce, DevExpress and DevExtreme, Storyblok, Autofac.</p>
-      </section>
-
-      <section id="about" class="letter" data-chapter="superga" aria-label="About me">
-        <figure class="phone-photo inline">
-          <img src="assets/turin-from-the-portico-of-the-superga.jpg" width="1400" height="1027" alt="Turin and the Alps seen from the portico of the Basilica of Superga, an etching by James Mitan" loading="lazy">
-        </figure>
-        <p class="reveal">I came to software from the plant floor. From 2013 to 2017 I installed, maintained and legally certified production-line control systems for Mettler-Toledo, in food, chemical and pharmaceutical plants.</p>
-        <p class="reveal">In 2017 I moved into software full time, on Microsoft Dynamics CRM at Betacom, and I have worked in C# and .NET ever since.</p>
-        <p class="reveal">Angular came next, at Amaris, on the web applications of BasicNet. It has stayed with me through Welol and MSC, where I now lead the msc.com front ends.</p>
-        <p class="reveal">In 2019 I spoke at Azure Meetup Torino: <a href="https://www.youtube.com/watch?v=2SSTy772sqk&amp;t=842s"><em>Azure Notification Hub: One Hub to notify them all</em></a>. I work in Italian and in English.</p>
-        <p class="signoff reveal">Claudio Cotrufo</p>
-        <p class="signoff-place reveal">Turin, Italy</p>
       </section>
 
       <section id="education" class="education field" data-chapter="bari" aria-labelledby="edu-title">
@@ -166,51 +159,44 @@
           <div><dt>Università degli Studi di Bari</dt><dd>Bachelor's in Computer Science and Software Production Technologies</dd><dd class="years">2005–2012</dd></div>
           <div><dt>I.T.C. G. Toniolo, Manfredonia</dt><dd>Technical diploma in commerce, programmer track</dd><dd class="years">2000–2005</dd></div>
         </dl>
-        <dl class="edu reveal">
+        <dl class="edu langs reveal">
           <div><dt>Italian</dt><dd>Native</dd></div>
           <div><dt>English</dt><dd>B1–B2</dd></div>
         </dl>
+      </section>
+
+      <section id="about" class="letter" data-chapter="superga" aria-labelledby="about-title">
+        <h2 id="about-title" class="reveal">From the plant floor</h2>
+        <figure class="phone-photo inline">
+          <img src="assets/turin-from-the-portico-of-the-superga.jpg" width="1400" height="1027" alt="Turin and the Alps seen from the portico of the Basilica of Superga, an etching by James Mitan" loading="lazy">
+        </figure>
+        <p class="reveal">From 2013 to 2017 I installed, maintained and legally certified production-line control systems for Mettler-Toledo, in food, chemical and pharmaceutical plants.</p>
+        <p class="reveal">In 2017 I moved into software full time, on Microsoft Dynamics CRM at Betacom. I have worked in C# and .NET ever since, and in Angular from my first project at Amaris.</p>
+        <p class="reveal">In 2019 I spoke at Azure Meetup Torino: <a href="https://www.youtube.com/watch?v=2SSTy772sqk&amp;t=842s">Azure Notification Hub: One Hub to notify them all</a>.</p>
+        <p class="signoff reveal">Claudio Cotrufo</p>
+        <p class="signoff-place reveal">Turin, Italy</p>
       </section>
     </main>
   </div>
 
   <section id="contact" class="contact" aria-labelledby="contact-title">
-    <img class="contact-photo" src="assets/po-river-via-murazzi-del-po-ferdinando.jpg" width="1400" height="933" alt="The Po river in Turin" loading="lazy">
-    <div class="visit">
-      <h2 id="contact-title">Write to me</h2>
-      <p>Based in Turin, Italy. Email is the quickest way to reach me.</p>
-      <dl class="visit-rows">
-        <div><dt>Email</dt><dd><a href="mailto:claudio.cotrufo.gm@gmail.com">claudio.cotrufo.gm@gmail.com</a></dd></div>
-        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/claudiocotrufo" rel="me">in/claudiocotrufo</a></dd></div>
-        <div><dt>CV</dt><dd><a href="files/claudio-cotrufo-cv.pdf" download>PDF, 2 pages</a></dd></div>
-      </dl>
-      <a class="button wide" href="mailto:claudio.cotrufo.gm@gmail.com?subject=Hello%20Claudio&amp;body=Hi%20Claudio%2C%0A%0A">Send an email</a>
+    <svg class="hexband thin" aria-hidden="true" focusable="false"><defs><pattern id="hexes-contact" width="28" height="30" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes-contact)"/></svg>
+    <h2 id="contact-title" class="reveal">Write to me</h2>
+    <p class="contact-mail reveal"><a href="mailto:claudio.cotrufo.gm@gmail.com">claudio.cotrufo.gm<wbr>@gmail.com</a></p>
+    <div class="contact-actions reveal">
+      <button class="button light" type="button" data-copy="claudio.cotrufo.gm@gmail.com">Copy the address</button>
+      <span class="copy-status" role="status" aria-live="polite"></span>
     </div>
+    <ul class="contact-links reveal">
+      <li><a href="https://www.linkedin.com/in/claudiocotrufo" rel="me">LinkedIn</a></li>
+      <li><a href="files/claudio-cotrufo-cv.pdf" download>The CV, PDF</a></li>
+      <li>Turin, Italy</li>
+    </ul>
   </section>
 
   <footer class="footer">
-    <div class="footer-photo">
-      <img src="assets/torino-mole-antonelliana.jpg" width="930" height="1400" alt="" loading="lazy">
-    </div>
-    <div class="footer-menu">
-      <svg class="hexband thin" aria-hidden="true" focusable="false"><defs><pattern id="hexes-footer" width="28" height="48" patternUnits="userSpaceOnUse"><polygon class="cell" points="14,2 25,8.5 25,21.5 14,28 3,21.5 3,8.5"/><polygon class="cell" points="0,26 11,32.5 11,45.5 0,52 -11,45.5 -11,32.5"/><polygon class="cell" points="28,26 39,32.5 39,45.5 28,52 17,45.5 17,32.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#hexes-footer)"/></svg>
-      <p class="footer-mark">Claudio Cotrufo</p>
-      <nav aria-label="Footer">
-        <ul class="menu">
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#stack">Stack</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-blocks">
-        <p><a href="mailto:claudio.cotrufo.gm@gmail.com">claudio.cotrufo.gm@gmail.com</a><br><a href="https://www.linkedin.com/in/claudiocotrufo" rel="me">LinkedIn</a></p>
-        <p>Turin, Italy<br><a href="files/claudio-cotrufo-cv.pdf" download>Download the CV</a></p>
-      </div>
-      <p class="credits">Pictures: <a href="https://commons.wikimedia.org/w/index.php?curid=4163461">“Torino Mole Antonelliana”</a> by Luigi Chiesa, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=108661786">“Arcades @ Via Roma @ Turin”</a> by Guilhem Vellut, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=104847119">“Po river @ Via Murazzi del Po”</a> by Guilhem Vellut, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=51152287">“Bari, castello 03”</a> by Palickap, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=113404550">“Turin from the Portico of the Superga Church”</a> by James Mitan, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. All via Wikimedia Commons, resized.</p>
-      <p class="legal">© 2026 Claudio Cotrufo</p>
-    </div>
+    <p class="credits">Pictures: <a href="https://commons.wikimedia.org/w/index.php?curid=4163461">“Torino Mole Antonelliana”</a> by Luigi Chiesa, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=108661786">“Arcades @ Via Roma @ Turin”</a> by Guilhem Vellut, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=104847119">“Po river @ Via Murazzi del Po”</a> by Guilhem Vellut, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=51152287">“Bari, castello 03”</a> by Palickap, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=113404550">“Turin from the Portico of the Superga Church”</a> by James Mitan, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. All via Wikimedia Commons, resized.</p>
+    <p class="legal">© 2026 Claudio Cotrufo</p>
   </footer>
 
   <script src="main.js" defer></script>

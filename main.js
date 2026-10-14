@@ -1,4 +1,5 @@
-// Stage crossfade by chapter, section entrances, the stack list, the active role.
+// Stage crossfade by chapter, section entrances, the active role and nav item,
+// the stack honeycomb (a radio group) and copying the email address.
 (() => {
   const root = document.documentElement;
   root.classList.add('js');
@@ -9,8 +10,8 @@
     mole: 'The Mole Antonelliana, Turin',
     roma: 'The arcades of Via Roma, Turin',
     po: 'The Po at the Murazzi, Turin',
-    superga: 'Turin from Superga, etching by James Mitan',
     bari: 'The castle of Bari',
+    superga: 'Turin from Superga, etching by James Mitan',
   };
   const stageImgs = [...document.querySelectorAll('.stage-img')];
   const caption = document.querySelector('[data-caption]');
@@ -21,10 +22,23 @@
     stageImgs.forEach((img) => img.classList.toggle('is-on', img.dataset.photo === key));
     if (caption) caption.textContent = captions[key] || '';
   };
+
+  // The nav marks the section being read.
+  const navLinks = [...document.querySelectorAll('[data-nav]')];
+  const mark = (id) => navLinks.forEach((a) => {
+    if (a.dataset.nav === id) a.setAttribute('aria-current', 'true');
+    else a.removeAttribute('aria-current');
+  });
+  const navFor = { work: 'work', stack: 'stack', education: 'about', about: 'about', contact: 'contact' };
+
   const chapters = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) show(e.target.dataset.chapter); });
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      if (e.target.dataset.chapter) show(e.target.dataset.chapter);
+      mark(navFor[e.target.id] || '');
+    });
   }, { rootMargin: '-45% 0px -45% 0px' });
-  document.querySelectorAll('[data-chapter]').forEach((el) => chapters.observe(el));
+  document.querySelectorAll('[data-chapter], #contact').forEach((el) => chapters.observe(el));
 
   // The role nearest the middle of the screen is the active one.
   const roles = [...document.querySelectorAll('.role')];
@@ -57,17 +71,48 @@
     reveals.forEach((el) => revealObs.observe(el));
   }
 
-  // The stack: one cell of the honeycomb selected at a time.
+  // The stack: a radio group of hexagons with a roving tab stop.
   const cells = [...document.querySelectorAll('.hex')];
   const panels = [...document.querySelectorAll('.tech-panel')];
-  const select = (key) => {
+  const select = (cell, focus) => {
     cells.forEach((c) => {
-      const on = c.dataset.key === key;
-      c.classList.toggle('is-on', on);
-      c.setAttribute('aria-pressed', String(on));
+      const on = c === cell;
+      c.setAttribute('aria-checked', String(on));
+      c.tabIndex = on ? 0 : -1;
     });
-    panels.forEach((p) => { p.hidden = p.dataset.panel !== key; });
+    panels.forEach((p) => { p.hidden = p.dataset.panel !== cell.dataset.key; });
+    if (focus) cell.focus();
   };
-  cells.forEach((c) => c.addEventListener('click', () => select(c.dataset.key)));
-  if (cells.length) select(cells[0].dataset.key);
+  cells.forEach((c, i) => {
+    c.addEventListener('click', () => select(c, false));
+    c.addEventListener('keydown', (e) => {
+      const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+      let next = null;
+      if (step) next = cells[(i + step + cells.length) % cells.length];
+      if (e.key === 'Home') next = cells[0];
+      if (e.key === 'End') next = cells[cells.length - 1];
+      if (!next) return;
+      e.preventDefault();
+      select(next, true);
+    });
+  });
+  if (cells.length) select(cells[0], false);
+
+  // Copy the email address, saying so where a screen reader will hear it.
+  const copy = document.querySelector('[data-copy]');
+  const status = document.querySelector('.copy-status');
+  if (copy && navigator.clipboard) {
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(copy.dataset.copy);
+        status.textContent = 'Copied.';
+      } catch {
+        status.textContent = 'Could not copy. Select the address above instead.';
+      }
+      clearTimeout(copy._t);
+      copy._t = setTimeout(() => { status.textContent = ''; }, 3000);
+    });
+  } else if (copy) {
+    copy.hidden = true;
+  }
 })();
